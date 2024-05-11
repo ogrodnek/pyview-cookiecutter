@@ -3,4 +3,8 @@ set dotenv-load
 start:
   PYVIEW_SECRET=`openssl rand -base64 16` cd src && poetry run uvicorn {{ cookiecutter.package_name }}.app:app --reload --port 7000
 
-UVICORN := `poetry run which uvicorn`
+docker-build:
+  docker build -t {{ cookiecutter.package_name }} .
+
+docker-run:
+  docker run -p 8000:8000 {{ cookiecutter.package_name }}
