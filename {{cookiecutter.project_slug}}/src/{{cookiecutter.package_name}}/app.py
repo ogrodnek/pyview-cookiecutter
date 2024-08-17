@@ -1,4 +1,4 @@
-from fastapi.staticfiles import StaticFiles
+from starlette.staticfiles import StaticFiles
 from pyview import PyView
 from .views import CountLiveView
 
