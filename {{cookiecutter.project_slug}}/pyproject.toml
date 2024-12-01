@@ -21,7 +21,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.10, <3.12"
-pyview-web = "^0.0.21"
+pyview-web = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

@@ -8,7 +8,7 @@ class CountContext(TypedDict):
 
 class CountLiveView(LiveView[CountContext]):
     async def mount(self, socket: LiveViewSocket[CountContext], _session):
-        socket.context = {"count": 0}
+        socket.context = CountContext({"count": 0})
 
     async def handle_event(self, event, payload, socket: LiveViewSocket[CountContext]):
         if event == "decrement":
