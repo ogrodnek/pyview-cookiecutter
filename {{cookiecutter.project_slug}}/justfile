@@ -8,3 +8,15 @@ docker-build:
 
 docker-run:
   docker run -p 8000:8000 {{ cookiecutter.package_name }}
+
+# Run all tests
+test:
+  poetry run pytest
+
+type-check:
+  poetry run pyright
+
+# Adds a new view to the project
+add-view name:
+  poetry run pv create-view {{ "{{name}}" }}
+
