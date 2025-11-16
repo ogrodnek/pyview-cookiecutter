@@ -1,4 +1,4 @@
-FROM python:3.12-alpine as build
+FROM python:3.14-alpine as build
 
 RUN apk add build-base libffi-dev
 RUN pip install poetry
@@ -13,7 +13,7 @@ COPY . .
 
 RUN poetry install --no-root --only main --no-cache
 
-FROM python:3.12-alpine as runtime
+FROM python:3.14-alpine as runtime
 
 ENV VIRTUAL_ENV=/app/.venv \
     PATH="/app/.venv/bin:$PATH"
