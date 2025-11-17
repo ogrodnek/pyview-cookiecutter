@@ -2,5 +2,6 @@
   "project_name": "Pyview Example Project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "port": "8000"
 }
