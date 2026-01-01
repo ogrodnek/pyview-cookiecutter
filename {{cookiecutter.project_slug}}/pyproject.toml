@@ -22,7 +22,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.15"
-pyview-web = "^0.6.0"
+pyview-web = "^0.8.0"
+uvicorn = "^0.40.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
